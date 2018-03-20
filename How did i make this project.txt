@@ -1,0 +1,52 @@
+1. Overall Structure
+
+Screen 
+Bluetooth 
+Button
+Battery
+
+2. Hardware for smart watch
+
+2.1 Arduino micro-controller (3.3V,8MHZ)
+2.2 Bluetooth (HC-06,3.3V)
+2.3 Dispaly (.96" 128×64 OLED)
+2.4 Battery (Lipo,3.7V)
+2.5 Etc -> soldering iron, 10K ohm resistance, button.
+
+3. Assembling the watch
+
+3.1  Connecting Arduino – bluetooth
+
+BT -> Arduino :
+VCC -> 3.3V
+GND -> GND
+TX -> D2
+RX -> D3
+
+3.2  Connecting Arduino – OLED
+
+OLED -> Arduino Pro mini :
+GND -> GND
+VCC -> VCC
+SDA -> A4(the analog 4th pin)
+SCL -> A5(the analog 5th pin)
+
+3.3 Connecting Arduino – UART module
+
+USB to UART module -> Arduino (Pro mini): 
+3.3V -> VCC
+TXD -> RXD
+RXD -> TXD
+GND -> GND
+
+3.4  Connecting Arduino – battery
+RAU -> (+)
+GND -> (-)
+
+4. Compile Arduino source for watch and upload
+
+4.1 install Adafruit_SSD1306, Adafruit-GFX-Library
+
+4.2 Copying the bitmap image header
+
+4.3 Compile and upload code 
